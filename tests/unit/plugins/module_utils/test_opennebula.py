@@ -76,6 +76,14 @@ RENDER_VALID = [
             NIC=[NAME="NIC1",NETWORK_ID="1"]
         ''').strip()
     ),
+    (
+        {
+            "NIC": {"SCHED_REQUIREMENTS": 'ID="1" | ID="2" | ID="3"'}
+        },
+        textwrap.dedent('''
+            NIC=[SCHED_REQUIREMENTS="ID=\\"1\\" | ID=\\"2\\" | ID=\\"3\\""]
+        ''').strip()
+    ),
 ]
 
 
